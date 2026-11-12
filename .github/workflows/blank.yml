@@ -1,16 +1,21 @@
-name: Upload Download Artifacts
-on: workflow_dispatch: 
+
+name: Artifact Upload Demo
+
+on:
+  workflow_dispatch:
 
 jobs:
-  Crate a file:
-  runs-on: ubuntu-latest
-  steps:
-    - name: create a file
-      run: echo "data-file" > data.txt
-    
-    - name: upload file
-      uses: actions/upload-artifact@v4
-      with:
-        name: datafile
-        path: data.txt
+  create_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create a file
+        run: echo "data-file" > data.txt
+
+      - name: Upload file
+        uses: actions/upload-artifact@v4
+        with:
+          name: datafile
+          path: data.txt
+
     
