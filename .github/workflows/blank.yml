@@ -17,5 +17,14 @@ jobs:
         with:
           name: datafile
           path: data.txt
+jobs:
+  runs-on: ubuntu-latest
 
-    
+  steps:
+    - name: Download a file
+      uses: actions/download-artifact@v4
+      with:
+        name: datafile
+
+    - name: show file
+      run: cat data.txt
