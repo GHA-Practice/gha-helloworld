@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: variable test
+        run: echo " testing my name as a repo variable, {{var.my-name}}
+    
       - name: Create a file
         run: echo "data-file" > data.txt
 
