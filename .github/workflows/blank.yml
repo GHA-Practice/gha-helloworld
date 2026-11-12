@@ -13,7 +13,7 @@ jobs:
       - name: variable test
         run: |
                echo "testing variable @ repo level, ${{vars.MY_NAME}}"
-               echo "testing secretes @ repo level, ${{secrets.DOCKER_PASSWORD}}"
+               echo "testing secretes @ repo level1, ${{secrets.DOCKER_PASSWORD}}"
         
     
       - name: Create a file
