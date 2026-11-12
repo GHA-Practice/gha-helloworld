@@ -2,7 +2,7 @@
 name: Artifact Upload Demo
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   job1:
