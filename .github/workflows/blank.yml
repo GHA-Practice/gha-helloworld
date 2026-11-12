@@ -1,8 +1,2 @@
-name: Hello World
-on: workflow_dispatch
-jobs:
-  hello-wold:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: hello GHA
-        run: echo "welcome GHA"
+name: Upload Download Artificats
+on: workflow_dispatch 
