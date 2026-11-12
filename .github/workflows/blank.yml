@@ -1,5 +1,5 @@
 name: Upload Download Artifacts
-on: workflow_dispatch 
+on: workflow_dispatch: 
 
 jobs:
   Crate a file:
