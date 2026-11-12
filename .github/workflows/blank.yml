@@ -11,7 +11,7 @@ jobs:
     steps:
 
       - name: variable test
-        run: echo "testing my name as a repo variable, ${{vars.my-name}}"
+        run: echo "testing my name as a repo variable, ${{vars.MY_NAME}}"
     
       - name: Create a file
         run: echo "data-file" > data.txt
