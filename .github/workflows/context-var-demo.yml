@@ -8,5 +8,14 @@ jobs:
         run: |
           echo " this workflow triggered by ${{ github.actor }}"
           echo " Repoistory is ${{ github.repository }}"
+          echo " this workflow triggered by ${{ github.action }}"
+          echo " this workflow triggered by ${{ github.action_path }}"
+          echo " this workflow triggered by ${{ github.action_ref }}"
+          echo " this workflow triggered by ${{ github.action_repository }}"
+          echo " this workflow triggered by ${{ github.actor_id }}"
+          echo " this workflow triggered by ${{ github.env }}"
+          echo " this workflow triggered by ${{ github.event }}"
+          echo " this workflow triggered by ${{ github.event_name }}"
+          echo " this workflow triggered by ${{ github.head_ref }}"
         
   
