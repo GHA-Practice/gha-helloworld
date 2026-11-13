@@ -19,6 +19,8 @@ jobs:
           echo " this workflow triggered by ${{ github.head_ref }}"
       - name: Print github object variables
         run: echo "${{toJson(github)}}"
-      - name: Print environment variables
+      - name: Print environment variables list
         run: printenv
+      - name: print only environment variable - keep focus syntax is different
+        run: echo "$GITHUB_SHA"
   
