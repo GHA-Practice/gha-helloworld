@@ -17,5 +17,6 @@ jobs:
           echo " this workflow triggered by ${{ github.event }}"
           echo " this workflow triggered by ${{ github.event_name }}"
           echo " this workflow triggered by ${{ github.head_ref }}"
-        
+      - name: Print github object variables
+        run: echo "${{toJson(github)}}"
   
