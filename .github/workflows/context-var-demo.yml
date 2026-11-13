@@ -1,0 +1,12 @@
+name: Context Veriable demo
+on: push
+jobs:
+  Context-Demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: use context variable
+        run: |
+          echo " this workflow triggered by ${{ github.actor }}"
+          echo " Repoistory is ${{ github.repository }}"
+        
+  
