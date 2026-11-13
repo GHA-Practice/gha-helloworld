@@ -9,6 +9,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Connecting to Environment
+              env:
+                APP_ENV: pro
               run: echo "The value of APP_ENV is $APP_ENV"
              
  
