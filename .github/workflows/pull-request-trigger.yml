@@ -2,9 +2,17 @@
 name: Artifact Upload Demo
 
 on:
-  pull-request:
-  branches:
-    - main
+  push:
+    branches:
+      - main
+      - dev
+      - "release/**"
+
+  pull_request:
+    branches:
+      - main
+      - dev
+      - "release/**"
 
 jobs:
   job1:

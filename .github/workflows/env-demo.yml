@@ -1,0 +1,12 @@
+name: Environment Variable Demo
+on: workflow_dispatch
+env:
+    APP_ENV: DEV
+jobs:
+    EnvironmentVariableDemo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Connecting to Environment
+              run: echo "The value of APP_ENV is $APP_ENV"
+             
+    
