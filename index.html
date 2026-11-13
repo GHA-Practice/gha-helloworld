@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple static website hosted on Amazon S3." />
+  <title>My Static Website</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: linear-gradient(135deg, #eef4ff, #f8fbff);
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 22px 8%;
+      background: #123b70;
+      color: white;
+    }
+    header h1 { margin: 0; font-size: 1.4rem; }
+    main {
+      width: min(900px, 90%);
+      margin: auto;
+      padding: 72px 0;
+      text-align: center;
+    }
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #dceaff;
+      color: #174b89;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    h2 { margin: 22px 0 14px; font-size: clamp(2rem, 5vw, 3.4rem); }
+    p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #526078;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    a {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 22px;
+      border-radius: 8px;
+      background: #1769d2;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    a:hover { background: #0f50a5; }
+    footer {
+      padding: 18px;
+      text-align: center;
+      color: #667085;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My S3 Static Website</h1>
+  </header>
+
+  <main>
+    <span class="tag">Successfully deployed</span>
+    <h2>Hello from Amazon S3!</h2>
+    <p>
+      This is a simple static website hosted using Amazon S3.
+      You can edit this page, upload your HTML, CSS, and JavaScript files
+      to your bucket, and make your website available to visitors.
+    </p>
+    <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">
+      Learn about Amazon S3
+    </a>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> My Static Website
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
